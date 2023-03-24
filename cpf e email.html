@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cpf caralho</title>
+</head>
+
+<body>
+    <script>
+
+        class aluno {
+            #nome
+            #email
+            #cpf
+            constructor(nome, email, cpf) {
+                this.#nome = this.nome
+                this.#email = this.email
+                this.#cpf = this.cpf
+            }
+            get nome() {
+                return this.#nome
+            }
+            get email() {
+                return this.#email
+            }
+            get cpf() {
+                return this.#cpf
+            }
+            set nome(nome) {
+                this.#nome = nome
+            }
+            set email(email) {
+                this.#email = email
+            }
+            set cpf(cpf) {
+                this.#cpf = cpf
+            }
+        }
+        var pergunta = []
+        pergunta[0] = prompt("digite o cpf")
+        var pergunta_email = prompt("digite seu nome")
+        var coisa = pergunta[0]
+        var j = 0
+        var loop = 0
+        var loop1 = 1
+        var loop2 = 1
+
+        p = new aluno()
+        this.nome = "Edgar Allan Poe"
+        this.email = undefined
+        this.cpf = undefined
+
+        for (let k = 1; k < 10; k++) {
+            var soma = coisa.substring(loop, loop1);
+            var soma = soma * loop2
+            var j = soma + j
+            loop++; loop1++; loop2++;
+        }
+
+        var soma = j % 11;
+        Math.ceil(soma)
+        if (soma == 10) {
+            soma = 0
+        }
+        var guarda = soma
+        document.write("o primeiro digito verificador é_" + soma + "<br>")
+
+
+        var loop = 0
+        var loop1 = 1
+        var loop2 = 0
+        var j = 0
+        var l = []
+
+        for (let k = 1; k < 10; k++) {
+            var soma1 = coisa.substring(loop, loop1);
+            var soma1 = soma1 * loop2
+            var j = soma1 + j
+            loop++; loop1++; loop2++;
+        }
+
+        var otherSoma = (soma * 9) + j
+        var otherSoma = otherSoma % 11
+        if (otherSoma == 10) {
+            otherSoma = 0
+        }
+        document.write("o segundo digito é" + otherSoma + "<br>")
+
+        var loop = 0
+        var loop1 = 1
+        var loop2 = 0
+        var j = 0
+
+        for (let k = 1; k < 10; k++) {
+            var soma2 = coisa.substring(loop, loop1);
+            var l = soma2 + l
+            loop++; loop1++; loop2++;
+        }
+
+        let invertida = l.split("").reverse().join("");
+        this.cpf = invertida + guarda + otherSoma;
+
+
+        if (this.cpf === pergunta[0]) {
+            document.write("seu cpf é valido");
+            document.write("seu cpf é_" + this.cpf + "<br>");
+        }
+        else if (this.cpf !== pergunta[0]) {
+            document.write("seu cpf é invalido, rejeitado !!")
+        }
+
+        //AGORA EMAIL POHA
+        var email = pergunta_email 
+        var email_div = email.split(" ") // separando a string cada vez que tem um espaço
+
+        email_1 = (email_div[0]) //pegando o primeiro nome que está no array
+        email_2 = (email_div[email_div.length - 1]) //pegando o ultimo nome, nao sei explicar so voce olhar e entender é fácil
+
+        junto = email_1 + "." + email_2 + "@etec.sp.gov.br" // juntando as duas partes
+
+        minusculo = junto.toLowerCase() //deixando o cpf em minusculo
+        document.write("seu email é " + minusculo) //exibindo o email
+    </script>
+</body>
+
+</html>
